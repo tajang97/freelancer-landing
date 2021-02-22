@@ -1,0 +1,48 @@
+@import '_vars'
+
+.button
+    padding: 0.5rem 1.25rem
+    background-color: transparent
+    border: 1px solid transparent
+    border-radius: 4px
+    outline: none
+    cursor: pointer
+    font-size: 1rem
+    font-family: 'Euclid Circular', sans-serif
+    transition: all 0.15s $easing
+
+.button-primary
+    background-color: $green
+    color: white
+    &:hover
+        background-color: $greenDarker
+    &:active
+        background-color: $greenDarkest
+
+.button-outlined
+    border-color: $greenDarker
+    color: $greenDarker
+    &:hover
+        color: white
+        background-color: $green
+    &:active
+        color: white
+        background-color: $greenDarkest
+
+.button-ghost
+    background-color: $greenTint
+    &:hover
+        color: white
+        background-color: $green
+    &:active
+        color: white
+        background-color: $greenDarkest
+
+.button-link
+    &:hover
+        color: $greenDarker
+    &:active
+        color: $greenDarkest
+
+.button-disabled
+    cursor: not-allowed
