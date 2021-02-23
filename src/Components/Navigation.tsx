@@ -5,26 +5,26 @@ import "../Styles/Navigation.sass";
 const Navigation: React.FunctionComponent = () => {
 	return (
 		<nav className="navigation">
-			<ul>
+			<ul className="navigation-ul d-flex">
 				<li className="navigation-item has-dropdown">
-					<Link to="/">Find Talent</Link>
-					<ul className="dropdown">
-						<li>
-							<Link to="/">Link 1</Link>
-						</li>
-						<li>
-							<Link to="/">Link 2</Link>
-						</li>
-						<li>
-							<Link to="/">Link 3</Link>
-						</li>
-					</ul>
+					<Link className="link navigation-link" to="/">
+						Find Freelancers
+					</Link>
+				</li>
+				<li className="navigation-item has-dropdown">
+					<Link className="link navigation-link" to="/">
+						Browse Jobs
+					</Link>
 				</li>
 				<li className="navigation-item">
-					<Link to="/">Find Work</Link>
+					<Link className="link navigation-link" to="/">
+						How it works
+					</Link>
 				</li>
 				<li className="navigation-item">
-					<Link to="/">How it works</Link>
+					<Link className="link navigation-link" to="/">
+						Resources
+					</Link>
 				</li>
 			</ul>
 		</nav>

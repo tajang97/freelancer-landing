@@ -9,7 +9,7 @@
 body
     font-family: 'Euclid Circular'
     font-size: 1rem
-    overflow: hidden
+    overflow-x: hidden
     color: $black
 
 li
@@ -22,3 +22,12 @@ a
 input
     font-family: 'Euclid Circular'
     font-size: 1rem
+
+.link
+    will-change: color
+    transition: color 0.15s $easing
+    &:hover
+        color: $greenDarker
+
+.d-flex
+    display: flex
