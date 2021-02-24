@@ -13,19 +13,26 @@ import "../Styles/Brands.sass";
 
 const Brands: React.FunctionComponent = () => {
 	return (
-		<div className="brands">
-			<Container>
-				<div className="brands-wrap d-flex">
-					<img className="brand-image" src={amazon} alt="amazon-logo" />
-					<img className="brand-image" src={deloitte} alt="deloitte-logo" />
-					<img className="brand-image" src={facebook} alt="facebook-logo" />
-					<img className="brand-image" src={nasa} alt="nasa-logo" />
-					<img className="brand-image" src={airbus} alt="airbus-logo" />
-					<img className="brand-image" src={ibm} alt="ibm-logo" />
-					<img className="brand-image" src={novo} alt="novo-logo" />
-				</div>
-			</Container>
-		</div>
+		<React.Fragment>
+			<div className="brands">
+				<Container>
+					<div className="brands-text">
+						We’ve helped tell over 450,000 stories so far - join amazing brands like
+						these and tell your story today
+					</div>
+					<div className="brands-wrap d-flex">
+						<img className="brand-image" src={amazon} alt="amazon-logo" />
+						<img className="brand-image" src={deloitte} alt="deloitte-logo" />
+						<img className="brand-image" src={facebook} alt="facebook-logo" />
+						<img className="brand-image" src={nasa} alt="nasa-logo" />
+						<img className="brand-image" src={airbus} alt="airbus-logo" />
+						<img className="brand-image" src={ibm} alt="ibm-logo" />
+						<img className="brand-image" src={novo} alt="novo-logo" />
+					</div>
+				</Container>
+			</div>
+			<div style={{ minHeight: "100vh" }}></div>
+		</React.Fragment>
 	);
 };
 
