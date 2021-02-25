@@ -14,7 +14,7 @@ const Header: React.FunctionComponent = () => {
 					<div className="navbar">
 						<div className="logo-wrap">
 							<Link to="/" className="logo">
-								Freelancer.uz
+								freelancer.uz
 							</Link>
 						</div>
 						<Navigation />

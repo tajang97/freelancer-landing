@@ -15,20 +15,23 @@
 .button-primary
     background-color: $green
     color: white
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)
     &:hover
         background-color: $greenDarker
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)
     &:active
         background-color: $greenDarkest
 
 .button-outlined
     border-color: $greenDarker
     color: $greenDarker
+    background-color: white
     &:hover
         // color: white
         background-color: $greenTint
     &:active
-        // color: white
-        background-color: $greyDarker
+
+        background-color: #EDE9FE
 
 .button-ghost
     background-color: $greenTint

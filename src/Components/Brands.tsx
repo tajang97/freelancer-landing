@@ -17,10 +17,10 @@ const Brands: React.FunctionComponent = () => {
 			<div className="brands">
 				<Container>
 					<div className="brands-text">
-						We’ve helped tell over 450,000 stories so far - join amazing brands like
-						these and tell your story today
+						We’ve helped tell over <strong>450,000</strong> stories so far - join
+						amazing brands like these and tell your story today
 					</div>
-					<div className="brands-wrap d-flex">
+					<div className="brands-wrap">
 						<img className="brand-image" src={amazon} alt="amazon-logo" />
 						<img className="brand-image" src={deloitte} alt="deloitte-logo" />
 						<img className="brand-image" src={facebook} alt="facebook-logo" />
