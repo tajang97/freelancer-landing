@@ -8,12 +8,12 @@ const Navigation: React.FunctionComponent = () => {
 			<ul className="navigation-ul d-flex">
 				<li className="navigation-item has-dropdown">
 					<Link className="link navigation-link" to="/">
-						Find Freelancers
+						Find freelancers
 					</Link>
 				</li>
 				<li className="navigation-item has-dropdown">
 					<Link className="link navigation-link" to="/">
-						Browse Jobs
+						Browse jobs
 					</Link>
 				</li>
 				<li className="navigation-item">

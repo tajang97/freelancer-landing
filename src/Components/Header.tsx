@@ -6,6 +6,8 @@ import Button from "./Button";
 import Container from "./Container";
 import Navigation from "./Navigation";
 
+import logo from "../Images/logo.png";
+
 const Header: React.FunctionComponent = () => {
 	return (
 		<React.Fragment>
@@ -13,8 +15,11 @@ const Header: React.FunctionComponent = () => {
 				<Container>
 					<div className="navbar">
 						<div className="logo-wrap">
-							<Link to="/" className="logo">
-								freelancer.uz
+							<Link to="/" className="logo d-flex">
+								<span>
+									<img className="logo-img" src={logo} alt="freelancer.uz-logo" />
+								</span>
+								<span className="logo-text">freelancer</span>
 							</Link>
 						</div>
 						<Navigation />
@@ -29,49 +34,7 @@ const Header: React.FunctionComponent = () => {
 					</div>
 				</Container>
 			</header>
-			<Banner />
 		</React.Fragment>
-	);
-};
-
-const Banner: React.FunctionComponent = () => {
-	return (
-		<div className="cat-bar">
-			<Container>
-				<ul className="d-flex">
-					<li>
-						<Link className="link" to="/">
-							Development & IT
-						</Link>
-					</li>
-					<li>
-						<Link className="link" to="/">
-							Design & Creative
-						</Link>
-					</li>
-					<li>
-						<Link className="link" to="/">
-							Sales & Marketing
-						</Link>
-					</li>
-					<li>
-						<Link className="link" to="/">
-							Writing & Translation
-						</Link>
-					</li>
-					<li>
-						<Link className="link" to="/">
-							Admin & Customer Support
-						</Link>
-					</li>
-					<li>
-						<Link className="link" to="/">
-							Finance & Accounting
-						</Link>
-					</li>
-				</ul>
-			</Container>
-		</div>
 	);
 };
 

@@ -10,8 +10,8 @@ import team from "../Images/seenit.png";
 const Hero: React.FunctionComponent = () => {
 	return (
 		<div className="hero">
-			<div className="hero-cirle hc-large"></div>
-			<div className="hero-cirle hc-small"></div>
+			<div className="cirle hc-large"></div>
+			<div className="cirle hc-small"></div>
 			<Container>
 				<div className="hero-content d-flex">
 					<div className="hero-content-left d-flex">

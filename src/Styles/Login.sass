@@ -1,0 +1,71 @@
+@import '_vars'
+
+.login-page
+    position: relative
+    overflow: hidden
+
+.login-wrap
+    min-height: calc( 100vh - 4.5rem )
+    flex-flow: column
+    justify-content: center
+    align-items: center
+
+.login-text
+    text-align: center
+    margin-top: -4rem
+    max-width: 540px
+    p
+        text-transform: uppercase
+        font-weight: 500
+        font-size: 0.75rem
+    h2
+        font-size: 2rem
+
+.login-form
+    flex-flow: column
+    margin-top: 2rem
+    min-width: 360px
+    label
+        margin-bottom: 0.5rem
+    input
+        padding: 12px
+        border: 2px solid #cecece
+        border-radius: 4px
+        margin-bottom: 1.5rem
+    .button
+        padding: 14px
+
+.login-password
+    flex-flow: column
+    position: relative
+
+.toggle-password
+    position: absolute
+    right: 12px
+    top: 16px
+    background-color: white
+    color: #cecece
+    transition: color 0.15s $easing
+    &:hover
+        color: $black
+
+.lc-top-left
+    width: 480px
+    height: 480px
+    top: -240px
+    left: -240px
+    background-color: #FCDF6A
+
+.lc-right
+    width: 400px
+    height: 400px
+    top: 100px
+    right: -300px
+    background-color: #F2ABA5
+
+.lc-bottom-left
+    width: 480px
+    height: 480px
+    bottom: -340px
+    left: -340px
+    background-color: #B7A9FC
