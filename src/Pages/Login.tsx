@@ -7,6 +7,7 @@ import eyeIcon from "@iconify-icons/uil/eye";
 import eyeSlash from "@iconify-icons/uil/eye-slash";
 
 import "../Styles/Login.sass";
+import { Link } from "react-router-dom";
 
 const Login: React.FunctionComponent = () => {
 	const [showPassword, setShowPassword] = useState(false);
@@ -17,17 +18,23 @@ const Login: React.FunctionComponent = () => {
 			<div className="cirle lc-bottom-left"></div>
 			<Container>
 				<div className="login-wrap d-flex">
-					<div className="login-text">
-						<p>Get started</p>
-						<h2>See how the Seenit could work for you and your business</h2>
+					<div className="form-text">
+						<p>Welcome Back</p>
+						<h2>Log Into My Account</h2>
 					</div>
 					<form className="login-form d-flex">
 						<label htmlFor="email">Email </label>
-						<input type="email" name="email" placeholder="Email address..." />
+						<input
+							className="input"
+							type="email"
+							name="email"
+							placeholder="Email address..."
+						/>
 						<label htmlFor="password">Password</label>
 
 						<div className="login-password d-flex">
 							<input
+								className="input"
 								type={showPassword ? "text" : "password"}
 								name="password"
 								placeholder="Password..."
@@ -43,6 +50,9 @@ const Login: React.FunctionComponent = () => {
 						<Button type="submit" variant="primary">
 							Log in
 						</Button>
+						<div className="forgot-password">
+							<Link to="/">Forgot Your Password?</Link>
+						</div>
 					</form>
 				</div>
 			</Container>

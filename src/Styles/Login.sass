@@ -9,8 +9,10 @@
     flex-flow: column
     justify-content: center
     align-items: center
+    position: relative
+    // z-index: 1
 
-.login-text
+.form-text
     text-align: center
     margin-top: -4rem
     max-width: 540px
@@ -20,20 +22,17 @@
         font-size: 0.75rem
     h2
         font-size: 2rem
+        margin-bottom: 2rem
 
 .login-form
     flex-flow: column
-    margin-top: 2rem
-    min-width: 360px
-    label
-        margin-bottom: 0.5rem
-    input
-        padding: 12px
-        border: 2px solid #cecece
-        border-radius: 4px
-        margin-bottom: 1.5rem
+    width: 100%
+    max-width: 400px
+    .input
+        margin: 0.5rem 0 1.25rem 0
     .button
         padding: 14px
+        margin-top: 4px
 
 .login-password
     flex-flow: column
@@ -42,12 +41,28 @@
 .toggle-password
     position: absolute
     right: 12px
-    top: 16px
+    top: 24px
     background-color: white
     color: #cecece
     transition: color 0.15s $easing
     &:hover
         color: $black
+
+.forgot-password
+    margin-top: 1rem
+    text-align: center
+    font-size: 14px
+    a
+        position: relative
+        &::after
+            position: absolute
+            content: ""
+            display: block
+            height: 1px
+            width: 100%
+            left: 0
+            bottom: -2px
+            background-color: $black
 
 .lc-top-left
     width: 480px
