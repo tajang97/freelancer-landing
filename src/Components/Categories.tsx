@@ -6,7 +6,7 @@ const Categories: React.FunctionComponent = () => {
 	return (
 		<div className="cat-bar">
 			<Container>
-				<ul className="d-flex">
+				<ul className="flex">
 					<li>
 						<Link className="link" to="/">
 							Development & IT

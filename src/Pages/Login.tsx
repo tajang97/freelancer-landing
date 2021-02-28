@@ -1,72 +1,28 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import Button from "../Components/Button";
 import Container from "../Components/Container";
+import EmailInput from "../Components/Form/EmailInput";
+import PasswordInput from "../Components/Form/PasswordInput";
+
 import "../Styles/Login.sass";
-import { Link } from "react-router-dom";
-
-import { Icon } from "@iconify/react";
-import eyeIcon from "@iconify-icons/uil/eye";
-import eyeSlash from "@iconify-icons/uil/eye-slash";
-
 const Login: React.FunctionComponent = () => {
-	const [showPassword, setShowPassword] = useState(false);
+	const emailRef = useRef<HTMLInputElement>(null!);
+	const passwordRef = useRef<HTMLInputElement>(null!);
 
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		console.log(emailRef.current.value, passwordRef.current.value);
+	};
 	return (
-		<div className="login-page">
-			<div className="cirle lc-top-left"></div>
-			<div className="cirle lc-right"></div>
-			<div className="cirle lc-bottom-left"></div>
+		<main className="page login">
 			<Container>
-				<div className="form-wrap d-flex">
-					<form className="form d-flex">
-						<div className="form-text">
-							<p>Welcome Back</p>
-							<h2>Log Into My Account</h2>
-						</div>
-						<div className="input-wrapper d-flex">
-							<label className="label" htmlFor="email">
-								Email
-							</label>
-							<input
-								className="input"
-								type="email"
-								name="email"
-								placeholder="Email address..."
-							/>
-						</div>
-						<div className="input-wrapper d-flex">
-							<label className="label" htmlFor="password">
-								Password
-							</label>
-							<div className="password-input d-flex">
-								<input
-									className="input"
-									type={showPassword ? "text" : "password"}
-									name="password"
-									placeholder="Password..."
-								/>
-								<span
-									className="password-toggle d-flex"
-									onClick={() => setShowPassword((prev) => !prev)}
-								>
-									{showPassword ? (
-										<Icon icon={eyeIcon} />
-									) : (
-										<Icon icon={eyeSlash} />
-									)}
-								</span>
-							</div>
-						</div>
-						<Button type="submit" variant="primary">
-							Log in
-						</Button>
-						<div className="forgot-password">
-							<Link to="/">Forgot Your Password?</Link>
-						</div>
-					</form>
-				</div>
+				<form onSubmit={handleSubmit} className="auth-form login-form">
+					<EmailInput refs={emailRef} />
+					<PasswordInput refs={passwordRef} />
+					<Button variant="primary">Submit</Button>
+				</form>
 			</Container>
-		</div>
+		</main>
 	);
 };
 

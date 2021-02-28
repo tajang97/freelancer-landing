@@ -5,7 +5,7 @@ import "../Styles/Navigation.sass";
 const Navigation: React.FunctionComponent = () => {
 	return (
 		<nav className="navigation">
-			<ul className="navigation-ul d-flex">
+			<ul className="navigation-ul flex">
 				<li className="navigation-item has-dropdown">
 					<Link className="link navigation-link" to="/">
 						Find freelancers

@@ -15,7 +15,7 @@ const Header: React.FunctionComponent = () => {
 				<Container>
 					<div className="navbar">
 						<div className="logo-wrap">
-							<Link to="/" className="logo d-flex">
+							<Link to="/" className="logo flex">
 								<span>
 									<img className="logo-img" src={logo} alt="freelancer.uz-logo" />
 								</span>

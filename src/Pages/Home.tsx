@@ -7,11 +7,11 @@ import Categories from "../Components/Categories";
 
 const Profile: React.FunctionComponent = () => {
 	return (
-		<>
+		<main className="page home">
 			<Categories />
 			<Hero />
 			<Brands />
-		</>
+		</main>
 	);
 };
 

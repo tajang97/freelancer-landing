@@ -10,11 +10,11 @@ import team from "../Images/seenit.png";
 const Hero: React.FunctionComponent = () => {
 	return (
 		<div className="hero">
-			<div className="cirle hc-large"></div>
-			<div className="cirle hc-small"></div>
+			<div className="background-cirle hc-large"></div>
+			<div className="background-cirle hc-small"></div>
 			<Container>
-				<div className="hero-content d-flex">
-					<div className="hero-content-left d-flex">
+				<div className="hero-content flex">
+					<div className="hero-content-left flex">
 						<h1>Hire the best freelancers for any job, online.</h1>
 						<h2>
 							Engage the largest network of trusted independent professionals to
@@ -29,7 +29,7 @@ const Hero: React.FunctionComponent = () => {
 							</Link>
 						</div>
 					</div>
-					<div className="hero-content-right d-flex">
+					<div className="hero-content-right flex">
 						<img className="hero-image" src={team} alt="hero-team" />
 					</div>
 				</div>
