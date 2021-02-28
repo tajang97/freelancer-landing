@@ -3,50 +3,67 @@
 .login-page
     position: relative
     overflow: hidden
+    .form
+        max-width: 400px
 
-.login-wrap
-    min-height: calc( 100vh - 4.5rem )
-    flex-flow: column
-    justify-content: center
-    align-items: center
-    position: relative
-    // z-index: 1
-
-.form-text
-    text-align: center
-    margin-top: -4rem
-    max-width: 540px
-    p
-        text-transform: uppercase
-        font-weight: 500
-        font-size: 0.75rem
-    h2
-        font-size: 2rem
-        margin-bottom: 2rem
-
-.login-form
+.form
     flex-flow: column
     width: 100%
-    max-width: 400px
-    .input
-        margin: 0.5rem 0 1.25rem 0
-    .button
+    .button-primary
         padding: 14px
-        margin-top: 4px
+        margin-top: 8px
 
-.login-password
+.register-page
+    position: relative
+    overflow: hidden
+    .form
+        max-width: min-content
+
+.fullname
+    grid-template-columns: repeat(2, 1fr)
+    grid-column-gap: 1rem
+    div
+        display: flex
+        flex-flow: column
+
+.account-select
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-column-gap: 1rem
+    .account-type
+        display: flex
+        padding: 12px
+        border: 2px solid #cecece
+        border-radius: 4px
+        position: relative
+        .cirle
+            right: 12px
+            height: 16px
+            width: 16px
+            border: 1px solid
+
+.input-wrapper
+    display: flex
+    flex-flow: column
+    margin-bottom: 1rem
+
+.label
+    margin-bottom: 0.25rem
+
+.password-input
     flex-flow: column
     position: relative
-
-.toggle-password
-    position: absolute
-    right: 12px
-    top: 24px
-    background-color: white
-    color: #cecece
-    transition: color 0.15s $easing
-    &:hover
-        color: $black
+    .password-toggle
+        padding: 4px
+        position: absolute
+        top: 50%
+        right: 8px
+        transform: translateY(-50%)
+        background-color: white
+        color: #cecece
+        transition: color 0.15s $easing
+        &:hover
+            color: $black
 
 .forgot-password
     margin-top: 1rem
@@ -84,3 +101,22 @@
     bottom: -340px
     left: -340px
     background-color: #B7A9FC
+
+.form-wrap
+    min-height: calc( 100vh - 4.5rem )
+    flex-flow: column
+    justify-content: center
+    align-items: center
+    position: relative
+
+.form-text
+    text-align: center
+    margin-top: -4rem
+    max-width: 540px
+    p
+        text-transform: uppercase
+        font-weight: 500
+        font-size: 0.75rem
+    h2
+        font-size: 2rem
+        margin-bottom: 2rem

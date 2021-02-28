@@ -1,22 +1,13 @@
 import React from "react";
 import "../Styles/Button.sass";
 
-type ButtonProps = {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	variant: string;
-	children: React.ReactNode;
-	disabled?: boolean;
-	type?: any;
-	className?: string;
-};
+}
 
-const Button: React.FunctionComponent<ButtonProps> = ({
-	variant,
-	disabled = false,
-	children,
-	type = "button",
-}) => {
+const Button: React.FunctionComponent<ButtonProps> = ({ variant, children, ...props }) => {
 	return (
-		<button className={"button button-" + variant} disabled={disabled} type={type}>
+		<button {...props} className={"button button-" + variant}>
 			{children}
 		</button>
 	);
