@@ -1,22 +1,14 @@
 import React from "react";
 
-type EmailProps = {
+interface EmailProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	refs: React.RefObject<HTMLInputElement>;
-};
+}
 
-const EmailInput: React.FunctionComponent<EmailProps> = ({ refs }) => {
+const EmailInput: React.FunctionComponent<EmailProps> = ({ refs, ...props }) => {
 	return (
 		<div className="auth-form-input">
 			<div className="email-input">
-				<input
-					ref={refs}
-					placeholder="Email address..."
-					className="input"
-					type="email"
-					name="email"
-					id="email"
-					required
-				/>
+				<input ref={refs} className="input" type="email" {...props} />
 			</div>
 		</div>
 	);

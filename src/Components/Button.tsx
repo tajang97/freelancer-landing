@@ -2,7 +2,7 @@ import React from "react";
 import "../Styles/Button.sass";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	variant: string;
+	variant: "primary" | "outlined" | "ghost" | "link" | "disabled";
 }
 
 const Button: React.FunctionComponent<ButtonProps> = ({ variant, children, ...props }) => {

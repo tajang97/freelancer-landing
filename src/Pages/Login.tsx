@@ -4,7 +4,8 @@ import Container from "../Components/Container";
 import EmailInput from "../Components/Form/EmailInput";
 import PasswordInput from "../Components/Form/PasswordInput";
 
-import "../Styles/Login.sass";
+import "../Styles/Auth.sass";
+
 const Login: React.FunctionComponent = () => {
 	const emailRef = useRef<HTMLInputElement>(null!);
 	const passwordRef = useRef<HTMLInputElement>(null!);
@@ -16,11 +17,33 @@ const Login: React.FunctionComponent = () => {
 	return (
 		<main className="page login">
 			<Container>
-				<form onSubmit={handleSubmit} className="auth-form login-form">
-					<EmailInput refs={emailRef} />
-					<PasswordInput refs={passwordRef} />
-					<Button variant="primary">Submit</Button>
-				</form>
+				<div className="form-wrap">
+					<form onSubmit={handleSubmit} className="auth-form" id="login-form">
+						<div className="form-text">
+							<p>Welcome back!</p>
+							<h2>Log into your account</h2>
+						</div>
+						<label htmlFor="login-email" form="login-form">
+							Email
+						</label>
+						<EmailInput
+							refs={emailRef}
+							id="login-email"
+							placeholder="Email..."
+							required
+						/>
+						<label htmlFor="login-password" form="login-form">
+							Password
+						</label>
+						<PasswordInput
+							refs={passwordRef}
+							id="login-password"
+							placeholder="Password..."
+							required
+						/>
+						<Button variant="primary">Submit</Button>
+					</form>
+				</div>
 			</Container>
 		</main>
 	);

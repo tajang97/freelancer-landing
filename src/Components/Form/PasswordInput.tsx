@@ -4,9 +4,9 @@ import { Icon } from "@iconify/react";
 import eyeIcon from "@iconify-icons/uil/eye";
 import eyeSlash from "@iconify-icons/uil/eye-slash";
 
-type PasswordProps = {
+interface PasswordProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	refs: React.RefObject<HTMLInputElement>;
-};
+}
 
 const PasswordInput: React.FunctionComponent<PasswordProps> = ({ refs, ...props }) => {
 	const [showPassword, setShowPassword] = useState(false);
@@ -16,15 +16,15 @@ const PasswordInput: React.FunctionComponent<PasswordProps> = ({ refs, ...props 
 			<div className="password-input">
 				<input
 					ref={refs}
-					placeholder="Password..."
 					className="input password-input"
 					type={showPassword ? "password" : "text"}
-					name="password"
-					id="password"
-					required
 					{...props}
 				/>
-				<span className="password-icon" onClick={() => setShowPassword((prev) => !prev)}>
+				<span
+					className="password-icon"
+					title="Toogle password visibility"
+					onClick={() => setShowPassword((prev) => !prev)}
+				>
 					{showPassword ? <Icon icon={eyeIcon} /> : <Icon icon={eyeSlash} />}
 				</span>
 			</div>

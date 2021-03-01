@@ -1,16 +1,18 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
 type Props = {
-	select: any;
+	select: Dispatch<SetStateAction<string>>;
 };
 
 const AccountSelect: React.FunctionComponent<Props> = ({ select }) => {
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		select(e.target.id);
+		console.log(e.target.id);
 	};
 
 	return (
 		<div className="auth-form-input">
+			<p className="account-select-text">I want to</p>
 			<div className="account-select">
 				<div className="account-option">
 					<input type="radio" name="account" id="work" onChange={handleChange} required />
